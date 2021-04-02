@@ -7,7 +7,8 @@ export default class extends Component {
 		this.state = {
             "color": "bg-red-300",
 			"title": props.title,
-            "complete": props.complete
+            "complete": props.complete,
+            "id": props.todoid
         }
 
         this.handleClick = this.handleClick.bind(this)
@@ -29,7 +30,7 @@ export default class extends Component {
 
 	render() {
 		return (
-            <div className="m-3 flex">
+            <div className="m-3 flex" id={this.state.id}>
                 <div className={this.state.color + " w-6 rounded mx-4"}  onClick={this.handleClick}>
                     <span>&nbsp;</span>
                 </div>
